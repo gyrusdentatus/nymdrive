@@ -1,0 +1,25 @@
+[package]
+name = "client"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chacha20poly1305 = "0.9"
+home = "0.5"
+anyhow = { version = "1", features = ["backtrace"] }
+pico-args = "0.4"
+rand = "0.8"
+data = { version = "0.1", path = "../data" }
+rust-argon2 = "0.8"
+tokio = { version = "1", features = ["full"] }
+sqlx = { version = "0.5", features = [ "runtime-tokio-native-tls", "sqlite" ] }
+reqwest = { version = "0.11", features = ["rustls-tls", "socks"] }
+lazy_static = "1"
+log = "0.4"
+pretty_env_logger = "0.4"
+http = "0.2"
+bytes = "1"
+bincode = "1"
+blake3 = "1"
+hyper = "0.14"
+notify = "5.0.0-pre.13"

@@ -1,0 +1,23 @@
+[Unit]
+Description=Nym Client (0.11.0)
+# After=network.target
+# After=systemd-user-sessions.service
+# After=network-online.target
+StartLimitIntervalSec=350
+StartLimitBurst=10
+
+[Service]
+User=nymdrive
+Type=simple
+# PIDFile=/run/my-service.pid
+# Environment="LD_LIBRARY_PATH=/home/nym"
+ExecStartPre=/home/nymdrive/
+ExecStart=/usr/local/bin/nym-client run --id nym-duplex
+ExecReload=/home/transang/startup.sh reload
+# ExecStop=/home/transang/startup.sh stop
+# TimeoutSec=30
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

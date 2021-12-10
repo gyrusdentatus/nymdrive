@@ -1,0 +1,7 @@
+/target
+*.db-shm
+*.db-wal
+live_server.db
+live_client.db
+*.swp
+

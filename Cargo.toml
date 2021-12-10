@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "client",
+    "data",
+    "server",
+    "gui",
+    "nym-duplex",
+]
