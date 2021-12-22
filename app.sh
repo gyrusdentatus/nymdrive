@@ -11,7 +11,7 @@ fi
 
 if [ "$1" != "noauto" ]; then
 	cd nym-duplex
-	sp="HY1FzvXoy1TurXzGJtoskJQkbs7gjyRDobmVgdPTLRWX.2iAYpXfcraGGuUYavWLNejhWmonYQRkj6pYSamWZGc6b@4iCkAvZEmKCFX9ubCiAjN6J5EoeQ87XWq89CdCCuZhH2"
+	sp="DHdzGES2Egbswhb4BMKZuXJ5haFygpM4qErBBZNUmHEL.FGrJ3D1DtBe3howuU9i89u32a6PkwUPJwCfeEVaXe3ha@83x9YyNkQ5QEY84ZU6Wmq8XHqfwf9SUtR7g5PAYB1FRY"
 	RUST_BACKTRACE=1 RUST_LOG=server cargo run --release --bin client -- --service-provider ${sp} &
 	cd ..
 fi
